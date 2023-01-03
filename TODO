@@ -1,0 +1,30 @@
+@media screen and (max-width: 992px) {
+    .testimonial__container {
+        width: auto;
+        
+    }
+    .testimonial__card {
+        padding: 1.25rem 1.5rem; 
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 430px) {}
+Todo:
+    ☐ Item
+
+    .button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}

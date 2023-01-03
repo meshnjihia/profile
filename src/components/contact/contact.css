@@ -1,0 +1,213 @@
+
+.contact__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    column-gap: 6rem;
+    padding-bottom: 3rem;
+    /* background-color: red; */
+    padding-left: 3.2rem;
+}
+
+.contact__title {
+    text-align: center;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+}
+
+.contact__info {
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: 300px;
+}
+
+.contact__card {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .75rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact__card-icon {
+    font-size: 2rem;
+    color: var(--title-color);
+    margin-bottom: var(--mb-0-25);
+}
+
+.contact__card-title,
+.contact__card-data {
+    font-size: var(--small-font-size);
+}
+
+.contact__card-title {
+    font-weight: var(--font-medium);
+}
+
+.contact__card-data {
+    display: block;
+    margin-bottom: var(--mb-0-75);
+}
+
+.contact__button {
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .25rem;
+    cursor: pointer;
+}
+
+.contact__button-icon {
+    font-size: 1rem;
+    color: var(--title-color);
+    transition: .3s;
+}
+
+.contact__button:hover
+.contact__button-icon {
+    transform: translateX(.25rem);
+}
+
+.contact__form {
+    width: 360px;
+}
+
+.contact__form-div {
+    position: relative;
+    margin-bottom: var(--mb-2);
+    height: 4rem;
+}
+/* implementation specific validation */
+.contact__form-div:has(:invalid){
+    --color: var(--invalid-input);
+}
+
+.contact__form-div:has(:invalid:not(:focus)){
+    animation: shake .4s;
+}
+
+.contact__form-div:has(:focus){
+    --color: var(--focus-input);
+}
+
+.contact__form-div:has(:valid){
+    --color: var(--valid-input);
+}
+
+.contact__form-div:has(:placeholder-shown){
+    --color: var(--blur);
+}
+
+.contact__form-div:has(:placeholder-shown:not(:focus)){
+    animation: none;
+}
+
+@keyframes shake {
+    0%, 100% {
+    transform: translateX(0);
+    }
+    20%, 40%, 60%, 80% {
+    transform: translateX(-4%);
+    }
+    10%, 30%, 50%, 70%, 90% {
+    transform: translateX(4%);
+    }
+}
+
+/* end of something that does not seem to be working*/
+#form__button {
+    background-color: var(--blur-color);
+    color: var(--blur);
+    cursor: context-menu;
+    
+}
+form:valid #form__button {
+    background-color: var(--title-color);
+    color: var(--container-color);
+    cursor: pointer;
+}
+
+.contact__form-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color, rgba(0, 0, 0, 0.3));
+    /* border: 5px solid var(--color, rgba(0, 0, 0, 0.4)); */
+    border-radius: .75rem;
+    color: var(--text-color);
+    outline: none;
+    background: none;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.contact__form-tag {
+    position: absolute;
+    top: -0.75rem;
+    left: 1.25rem;
+    font-size: var(--smaller-font-size);
+    padding: .25rem;
+    background-color: var(--body-color);
+    z-index: 10;
+}
+
+.contact__form-textarea {
+    height: 11.9rem;
+}
+
+.contact__form-textarea textarea {
+    resize: none;
+}
+
+.form__connect-div svg {
+    width: 1.3rem;
+}
+
+/* .contact__form-input:has(:invalid){
+    border: var(--invalid);
+}
+
+.contact__form-input:has(:invalid:not(:focus)){
+    animation: shake .4s;
+}
+
+.contact__form-input:has(:focus){
+    --color: var(--focus-input);
+}
+
+.contact__form-input:has(:valid){
+    --color: var(--valid-input);
+}
+
+.contact__form-input:has(:placeholder-shown){
+    --color: var(--blur);
+}
+
+.contact__form-input:has(:placeholder-shown:not(:focus)){
+    animation: none;
+} */
+
+
+/* @media screen and (max-width: 992px) {
+    .contact__container {
+        /* column-gap: 3rem;  */
+    
+
+/* For medium devices *
+@media screen and (max-width: 768px) {
+    .contact__container {
+        grid-template-columns: max-content;
+        
+    }
+}
+
+@media screen and (max-width: 576px) {
+}
+*/
+/* For small devices 
+@media screen and (max-width: 430px) {} */
